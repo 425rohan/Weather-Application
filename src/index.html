@@ -3,12 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./input.css">
     <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nerko+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Weather App</title>
 </head>
-<body>
-    <h1 class="text-3xl font-semibold">
-        Hello world!
-      </h1>
+<body class="bg-slate-800">
+    <div class="container-fluid bg-slate-800">
+        <h1 class="font-semibold text-center py-3 text-3xl md:text-5xl lg:text-6xl xl:py-6 xl:text-7xl">Weather App</h1>
+        
+    </div>
+    <div class="container mx-auto mb-12 mt-6 bg-slate-300 md:p-10 lg:p-14 xl:rounded-xl">
+        <div class="flex flex-col gap-4 p-4 lg:flex-row lg:gap-6 xl:gap-8 xl:p-6 border-solid border-2 border-gray-200 lg:rounded-3xl xl:rounded-6xl">
+            <div class="lg:w-1/3 lg:mt-8 xl:mt-12">
+                <!-- md:w-1/3 -->
+            <div class="input-text xl:my-2">
+                <!--  -->
+                <label for="city" class="block my-2 text-center text-slate-800 text-lg  font-semibold md:text-xl lg:text-2xl xl:text-3xl">Enter City Name</label>
+                <input type="text" id="city" class="p-2 border-2outline-slate-200  block mx-auto md:text-lg xl:text-2xl" name="cityName" placeholder="Enter City (or Place)"><br>
+                <div class="dropdown -my-3 text-center">
+                    <!-- <p class="drop-item bg-white border-2 border-grey p-1">Mumbai</p> -->
+                </div>
+            </div>
+             <input type="button" id='userCityButton' class="block mx-auto font-medium bg-slate-600 text-slate-200 p-2 border-solid border-2 border-slate-800 md:p-2 md:text-lg lg:p-2 xl:text-xl " value="Submit city name">
+             <p class="text-center my-1 opacity-50">or</p>
+             <span class="block w-full border-dashed border-y-2 border my-2 border-gray-400"></span>
+
+             <input type="button" id='userLocBtn' class="block my-2  mx-auto font-medium bg-slate-200 text-slate-800 p-2 border-solid border-2 border-slate-800 md:p-2  md:text-lg lg:p-2 xl:text-xl" value="&#9967; Use current location">
+             
+             <p class="message text-center my-2 font-semibold lg:text-xl"></p>
+            </div>
+            <div class="flex-grow">
+             <div class="rounded-2xl flex flex-col bg-slate-200 p-6 md:p-8 md:flex-row md:gap-5 justify-between lg:p-8 lg:flex-row xl:justify-around">
+              <div class="banner-text self-center md:text-left">
+                <h1 class="text-2xl font-bold text-slate-700 md:text-4xl lg:text-4xl xl:text-5xl xl:my-4 banner-name">New York</h1>
+                <p class="my-2 text-slate-700 font-semibold md:text-2xl xl:text-3xl banner-temp">Temperature (2m): </p>
+                <p class="my-2 text-slate-700 font-semibold md:text-2xl xl:text-3xl banner-humi">Humidity: </p>
+                <p class="my-2 text-slate-700 font-semibold md:text-2xl xl:text-3xl banner-wind">Wind Speed (10m): </p>
+              </div> 
+              <div class="banner-img self-center">
+                <div class="banner-img p-6 bg-slate-300 rounded-full"> 
+                    <img src="./images/rainy.png" alt="Rainy weather image" class="h-28 w-28 md:h-32 md:w-32 lg:h-40 lg:w-40 xl:h-44 xl:w-44">
+               </div>
+               <p class="banner-desc text-center my-2 text-slate-700 text-lg md:text-xl lg:text-2xl font-semibold">Rainy</p>
+              </div>
+              
+              
+             </div>
+             <h2 class="font-bold text-2xl my-6 text-slate-700 text-center md:text-3xl lg:text-4xl xl:my-8">5 Day Forecast</h2>
+             <div class="flex flex-row flex-wrap gap-4 md:text-4xl md:gap-6 lg:gap-8 xl:gap-10">
+                <div class="bg-slate-200 text-center w-fit mx-auto text-gray-800 font-semibold p-4 md:w-fit md:p-6 f-item1 lg:w-fit lg:p-8 xl:p-10 max-w-sm rounded-xl">
+                    <p class="text-lg font-bold f-date my-1 md:text-xl xl:text-3xl">2024-4-24</p>
+                    <img src="./images/sunny.png" alt="sunny" class="data-img h-12 block mx-auto my-4 md:h-14 lg:h-20">
+                    <p class="text-sm f-temp my-1 md:text-xl xl:text-2xl">Temp:</p>
+                    <p class="text-sm f-uv my-1 md:text-xl xl:text-2xl">UV Index:</p>
+                    <p class="text-sm f-wi my-1 md:text-xl xl:text-2xl">Wind Speed:</p>
+                </div>
+                <div class="bg-slate-200 text-center w-fit mx-auto text-gray-800 font-semibold p-4 md:w-fit md:p-6 f-item2 lg:w-fit lg:p-8 xl:p-10 max-w-sm rounded-xl">
+                    <p class="text-lg font-bold f-date my-1 md:text-xl xl:text-3xl">2024-4-24</p>
+                    <img src="./images/sunny.png" alt="sunny" class="data-img h-12 block mx-auto my-4 md:h-14  lg:h-20">
+                    <p class="text-sm f-temp my-1 md:text-xl xl:text-2xl">Temp:</p>
+                    <p class="text-sm f-uv my-1 md:text-xl xl:text-2xl">UV Index:</p>
+                    <p class="text-sm f-wi my-1 md:text-xl xl:text-2xl">Wind Speed:</p>
+                </div>
+                <div class="bg-slate-200 text-center w-fit mx-auto text-gray-800 font-semibold p-4 md:w-fit md:p-6 f-item3  lg:w-fit lg:p-8 xl:p-10 max-w-sm rounded-xl">
+                    <p class="text-lg font-bold f-date my-1 md:text-xl xl:text-3xl">2024-4-24</p>
+                    <img src="./images/sunny.png" alt="sunny" class="data-img h-12 block mx-auto my-4 md:h-14  lg:h-20">
+                    <p class="text-sm f-temp my-1 md:text-xl xl:text-2xl">Temp:</p>
+                    <p class="text-sm f-uv my-1 md:text-xl xl:text-2xl">UV Index:</p>
+                    <p class="text-sm f-wi my-1 md:text-xl xl:text-2xl">Wind Speed:</p>
+                </div>
+                <div class="bg-slate-200 text-center w-fit mx-auto text-gray-800 font-semibold p-4 md:w-fit md:p-6 f-item4  lg:w-fit lg:p-8 xl:p-10 max-w-sm rounded-xl">
+                    <p class="text-lg font-bold f-date my-1 md:text-xl xl:text-3xl">2024-4-24</p>
+                    <img src="./images/sunny.png" alt="sunny" class="data-img block mx-auto my-4 h-12 md:h-14  lg:h-20">
+                    <p class="text-sm f-temp my-1 md:text-xl xl:text-2xl">Temp:</p>
+                    <p class="text-sm f-uv my-1 md:text-xl xl:text-2xl">UV Index:</p>
+                    <p class="text-sm f-wi my-1 md:text-xl xl:text-2xl">Wind Speed:</p>
+                </div>
+                <div class="bg-slate-200 text-center w-fit mx-auto text-gray-800 font-semibold p-4 md:w-fit md:p-6 f-item5  lg:w-fit lg:p-8 xl:p-10 max-w-sm rounded-xl">
+                    <p class="text-lg font-bold f-date my-1 md:text-xl xl:text-3xl">2024-4-24</p>
+                    <img src="./images/sunny.png" alt="sunny" class="data-img block h-12 mx-auto my-4 md:h-14   lg:h-20">
+                    <p class="text-sm f-temp my-1 md:text-xl xl:text-2xl">Temp:</p>
+                    <p class="text-sm f-uv my-1 md:text-xl xl:text-2xl">UV Index:</p>
+                    <p class="text-sm f-wi my-1 md:text-xl xl:text-2xl">Wind Speed:</p>
+                </div>
+                
+             </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./index.js"></script>
+
 </body>
 </html>

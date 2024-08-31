@@ -3,3 +3,43 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+
+/* for some reason tailwind classes for absolute and relative were not working so added it below myself */
+
+
+.container-fluid h1{
+    font-family: "Nerko One", cursive;
+    /* font-size: 2.5rem; */
+    font-weight: normal;
+    text-shadow: 3px 3px 3px rgb(65, 65, 65);
+    color: rgb(183, 183, 183);
+}
+.container{
+    font-family: "SUSE", sans-serif;
+}
+.input-text{
+    position: relative;
+    width: 100%;
+}
+.dropdown{
+    position: absolute;
+    width: inherit;
+    display: none;
+    
+}
+.dropdown-visible{
+    display: block;
+    z-index: 1;
+}
+
+.message{
+    display: none;
+    color: darkblue;
+    opacity: 0.7;
+    
+}
+
+.message-visible{
+    display: block;
+}
