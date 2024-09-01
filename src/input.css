@@ -43,10 +43,10 @@
 .message-visible{
     display: block;
 }
-input{
+input[type = 'button']{
     transition: 0.15s ease;
 }
-input:hover{
+input[type = button]:hover{
     opacity: 0.5;
     cursor: pointer;
 }
