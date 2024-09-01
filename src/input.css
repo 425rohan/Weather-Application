@@ -5,7 +5,7 @@
 @import "tailwindcss/utilities";
 
 
-/* for some reason tailwind classes for absolute and relative were not working so added it below myself */
+/* added some custom style below */
 
 
 .container-fluid h1{

@@ -6,26 +6,28 @@
     <link rel="stylesheet" href="./src/input.css">
     <link rel="stylesheet" href="./src/output.css">
     <link rel="shortcut icon" href="./src/images/sunny.png" type="image/x-icon">
+    <!-- some tailwind classes were not reflecting on adding(build issue), so added cdn file to avoiid any issue -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nerko+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nerko+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Weather App</title>
 </head>
 <body class="bg-slate-800">
+    <!-- Project title -->
     <div class="container-fluid bg-slate-800">
         <h1 class="font-semibold text-center py-3 text-3xl md:text-5xl lg:text-6xl xl:py-6 xl:text-7xl">Weather App</h1>
-        
     </div>
+
+    <!-- Main project container -->
     <div class="container mx-auto mb-12 mt-6 bg-slate-300 md:p-10 lg:p-14 xl:rounded-xl">
         <div class="flex flex-col gap-4 p-4 lg:flex-row lg:gap-6 xl:gap-8 xl:p-6 border-solid border-2 border-gray-200 lg:rounded-3xl xl:rounded-6xl">
             <div class="lg:w-1/3 lg:mt-8 xl:mt-12">
-                <!-- md:w-1/3 -->
             <div class="input-text xl:my-2">
-                <!--  -->
+                <!-- Input fields below -->
                 <label for="city" class="block my-2 text-center text-slate-800 text-lg  font-semibold md:text-xl lg:text-2xl xl:text-3xl">Enter City Name</label>
                 <input type="text" id="city" class="p-2 border-2outline-slate-200  block mx-auto md:text-lg xl:text-2xl" name="cityName" placeholder="Enter City (or Place)"><br>
                 <div class="dropdown -my-3 text-center">
@@ -42,6 +44,7 @@
             </div>
             <div class="flex-grow">
              <div class="rounded-2xl flex flex-col bg-slate-200 p-6 md:p-8 md:flex-row md:gap-5 justify-between lg:p-8 lg:flex-row xl:justify-around">
+              <!-- Banner weather info below -->
               <div class="banner-text self-center md:text-left">
                 <h1 class="text-2xl font-bold text-slate-700 md:text-4xl lg:text-4xl xl:text-5xl xl:my-4 banner-name">New York</h1>
                 <p class="my-2 text-slate-700 font-semibold md:text-2xl xl:text-3xl banner-temp">Temperature (2m): </p>
@@ -58,6 +61,7 @@
               
              </div>
              <h2 class="font-bold text-2xl my-6 text-slate-700 text-center md:text-3xl lg:text-4xl xl:my-8">5 Day Forecast</h2>
+             <!-- Forecast items below -->
              <div class="flex flex-row flex-wrap gap-4 md:text-4xl md:gap-6 lg:gap-8 xl:gap-10">
                 <div class="bg-slate-200 text-center w-fit mx-auto text-gray-800 font-semibold p-4 md:w-fit md:p-6 f-item1 lg:w-fit lg:p-8 xl:p-10 max-w-sm rounded-xl">
                     <p class="text-lg font-bold f-date my-1 md:text-xl xl:text-3xl">2024-4-24</p>
