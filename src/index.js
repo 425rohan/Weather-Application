@@ -91,19 +91,19 @@ function displayWeatherData(city,wArr){
     bannerHumi.innerText = 'Humidity: ' + wArr[1];
     bannerWind.innerText = 'Wind Speed (10m): ' +wArr[3];
     if(wArr[9][0] === 1){
-       bannerImg.src = '././images/sunny.png';
+       bannerImg.src = './src/images/sunny.png';
        bannerDesc.innerText = 'Sunny';
     }
     else if(wArr[9][0] === 2 || wArr[9][0] === 3){
-        bannerImg.src = './images/cloudy.png';
+        bannerImg.src = './src/images/cloudy.png';
         bannerDesc.innerText = 'Cloudy/Partly Cloudy';
     }
     else if(wArr[9][0] === 80 || wArr[9][0] === 95){
-        bannerImg.src = './images/rainy.png';
+        bannerImg.src = './src/images/rainy.png';
         bannerDesc.innerText = 'Rainy';
     }
     else{
-        bannerImg.src = './images/sunny.png';
+        bannerImg.src = './src/images/sunny.png';
         bannerDesc.innerText = 'Sunny';
     }
 
@@ -121,16 +121,16 @@ function displayWeatherData(city,wArr){
        fWind.innerText ='Wind(10m): '+ wArr[7][i];
        
     if(wArr[9][i] === 1){
-        fImg.src = '././images/sunny.png';
+        fImg.src = './src/images/sunny.png';
      }
      else if(wArr[9][i] === 2 || wArr[9][i] === 3){
-         fImg.src = './images/cloudy.png';
+         fImg.src = './src/images/cloudy.png';
      }
      else if(wArr[9][i] === 80 || wArr[9][i] === 95){
-         fImg.src = './images/rainy.png';
+         fImg.src = './src/images/rainy.png';
      }
      else{
-         fImg.src = './images/sunny.png';
+         fImg.src = './src/images/sunny.png';
      }
 
     }

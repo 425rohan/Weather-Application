@@ -43,3 +43,10 @@
 .message-visible{
     display: block;
 }
+input{
+    transition: 0.15s ease;
+}
+input:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
